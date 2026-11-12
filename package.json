@@ -1,0 +1,16 @@
+{
+  "name": "ivan-andrianovsky-cv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "playwright install --only-shell chromium",
+    "build:pdf": "node scripts/build-pdf.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "markdown-it": "15.0.3",
+    "playwright": "1.65.0"
+  }
+}

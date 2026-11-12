@@ -1,0 +1,67 @@
+@page {
+  size: A4;
+  margin: 15mm 16mm;
+}
+
+body {
+  margin: 0;
+  color: #202630;
+  font-family: Arial, "Liberation Sans", sans-serif;
+  font-size: 10pt;
+  line-height: 1.35;
+}
+
+h1, h2, h3 {
+  color: #172b46;
+  line-height: 1.2;
+  break-after: avoid;
+}
+
+h1 {
+  margin: 0 0 8pt;
+  font-size: 24pt;
+}
+
+h2 {
+  margin: 14pt 0 6pt;
+  padding-bottom: 3pt;
+  border-bottom: 0.5pt solid #cbd3dd;
+  font-size: 12pt;
+}
+
+h3 {
+  margin: 10pt 0 4pt;
+  font-size: 11pt;
+}
+
+p {
+  margin: 0 0 6pt;
+  orphans: 3;
+  widows: 3;
+}
+
+ul, ol {
+  margin: 0 0 7pt;
+  padding-left: 15pt;
+}
+
+li {
+  margin-bottom: 3pt;
+  break-inside: avoid;
+}
+
+a {
+  color: #17558b;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 4pt;
+  border: 0.5pt solid #cbd3dd;
+}

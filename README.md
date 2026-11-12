@@ -1,5 +1,9 @@
 # Ivan Andrianovsky
 
+<!-- pdf:exclude:start -->
+[Download latest PDF](https://github.com/andrianovsky/cv/releases/latest/download/cv.pdf)
+<!-- pdf:exclude:end -->
+
 **Senior Java Backend Engineer**
 
 Tbilisi, Georgia | Open to remote work and relocation  

@@ -1,0 +1,72 @@
+name: Build and release CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - scripts/**
+      - package.json
+      - package-lock.json
+      - .github/workflows/cv-pdf.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Finish a publication before starting another one.
+concurrency:
+  group: cv-pdf-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out CV
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium system libraries
+        run: npx playwright install-deps chromium
+
+      - name: Build PDF from README
+        run: npm run build:pdf
+
+      - name: Save build artifact
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: cv-pdf
+          path: output/pdf/cv.pdf
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          tag="cv-${GITHUB_RUN_NUMBER}-${GITHUB_RUN_ATTEMPT}"
+          cat > release-notes.md <<EOF
+          CV generated from [README.md](https://github.com/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/README.md).
+
+          [Download the latest PDF](https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/cv.pdf)
+          EOF
+          gh release create "$tag" output/pdf/cv.pdf \
+            --target "$GITHUB_SHA" \
+            --title "CV - build ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}" \
+            --notes-file release-notes.md \
+            --latest
