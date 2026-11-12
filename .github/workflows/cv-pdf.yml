@@ -48,8 +48,8 @@ jobs:
       - name: Save build artifact
         uses: actions/upload-artifact@v7.0.2
         with:
-          name: cv-pdf
-          path: output/pdf/cv.pdf
+          name: Ivan_Andrianovsky_cv
+          path: output/pdf/Ivan_Andrianovsky_cv.pdf
           if-no-files-found: error
           retention-days: 14
 
@@ -63,9 +63,9 @@ jobs:
           cat > release-notes.md <<EOF
           CV generated from [README.md](https://github.com/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/README.md).
 
-          [Download the latest PDF](https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/cv.pdf)
+          [Download the latest PDF](https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/Ivan_Andrianovsky_cv.pdf)
           EOF
-          gh release create "$tag" output/pdf/cv.pdf \
+          gh release create "$tag" output/pdf/Ivan_Andrianovsky_cv.pdf \
             --target "$GITHUB_SHA" \
             --title "CV - build ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}" \
             --notes-file release-notes.md \

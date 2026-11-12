@@ -15,7 +15,7 @@ const markdown = source.replace(
   '',
 );
 const body = new MarkdownIt({ linkify: true }).render(markdown);
-const output = fileURLToPath(new URL('output/pdf/cv.pdf', root));
+const output = fileURLToPath(new URL('output/pdf/Ivan_Andrianovsky_cv.pdf', root));
 await mkdir(new URL('output/pdf/', root), { recursive: true });
 
 const browser = await chromium.launch({

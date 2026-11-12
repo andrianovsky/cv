@@ -1,22 +1,24 @@
 # PDF automation
 
 The [Build and release CV PDF](../.github/workflows/cv-pdf.yml) workflow builds
-`README.md` into `cv.pdf` whenever the CV, its PDF styling, dependencies, or
-workflow changes on `main`. Push these files to `main` to create the first release.
+`README.md` into `Ivan_Andrianovsky_cv.pdf` whenever the CV, its PDF styling,
+dependencies, or workflow changes on `main`. Push these files to `main` to create
+the first release.
 You can also use **Actions → Build and release CV PDF → Run workflow** on `main`.
 
 Every successful run creates a new GitHub release with a unique
 `cv-<run-number>-<run-attempt>` tag pointing to the source commit, attaches
-`cv.pdf`, and marks the release as latest. Earlier releases remain available.
+`Ivan_Andrianovsky_cv.pdf`, and marks the release as latest. Earlier releases
+remain available.
 Builds also retain a workflow artifact for 14 days.
 
 The permanent download link is:
 
-**https://github.com/andrianovsky/cv/releases/latest/download/cv.pdf**
+**https://github.com/andrianovsky/cv/releases/latest/download/Ivan_Andrianovsky_cv.pdf**
 
 The link starts working after the first successful release. Keep the asset name
-`cv.pdf` unchanged to preserve it. Publishing another release as latest should
-also include this asset if you want the link to continue working.
+`Ivan_Andrianovsky_cv.pdf` unchanged to preserve it. Publishing another release
+as latest should also include this asset if you want the link to continue working.
 
 The workflow uses GitHub's automatic `GITHUB_TOKEN` with `contents: write`;
 no personal access token or additional secrets are needed. GitHub Actions must
@@ -46,8 +48,9 @@ after dependency changes or when setting up a fresh checkout.
 
 On Linux, use `npx playwright install-deps chromium` to install any missing
 system libraries too; the workflow does this automatically. The generated file
-is `output/pdf/cv.pdf` and is ignored by Git. To build with an existing Chromium
-browser, set `CHROMIUM_EXECUTABLE_PATH` to its executable path before building.
+is `output/pdf/Ivan_Andrianovsky_cv.pdf` and is ignored by Git. To build with an
+existing Chromium browser, set `CHROMIUM_EXECUTABLE_PATH` to its executable path
+before building.
 
 The build uses Markdown and Chromium with A4 print styles from
 [`scripts/pdf.css`](../scripts/pdf.css). Edit `README.md` to update the CV;
