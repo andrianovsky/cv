@@ -7,63 +7,52 @@ ivan.andrianovsky@gmail.com | [LinkedIn](https://www.linkedin.com/in/ivan-andria
 
 ## Summary
 
-Senior Java Backend Engineer with 12+ years in software development, building backend systems and event-driven integrations with Java and Spring Boot. Takes end-to-end ownership from clarifying business needs through implementation, testing, release and production support. Works across backend, frontend and test automation to deliver complete solutions, with hands-on technical leadership experience. Brings a pragmatic engineering mindset: straightforward, maintainable solutions, processes adapted to the problem, and a focus on business outcomes.
+Senior Java Backend Engineer with 12+ years in software development, including Java/Spring Boot services and event-driven integrations. Takes end-to-end ownership from clarifying business rules to implementation, testing and production delivery. Led an asset-processing workflow migration covering approximately 50,000 assets and built automation that replaced manual content operations. Works across backend, frontend and test automation, choosing straightforward, maintainable solutions and adapting processes to business needs.
 
 ## Technical Skills
 
 - **Backend:** Java, Spring Boot, Spring Framework, REST APIs, microservices
-- **Data and messaging:** MongoDB, PostgreSQL, MySQL, Apache Kafka, Apache Jackrabbit / JCR
-- **Cloud and delivery:** AWS S3/SQS, Google Cloud, Docker, Kubernetes application operations, Jenkins, Maven, Git
-- **Testing and operations:** JUnit, Cucumber, Selenium, BDD, Grafana, production troubleshooting
+- **Data and messaging:** MongoDB, PostgreSQL, Apache Kafka
+- **Cloud and delivery:** AWS S3/SQS, Google Cloud, Docker, Kubernetes, Jenkins, Git, Maven
+- **Testing and observability:** JUnit, Cucumber, BDD, Grafana, production troubleshooting
 
 ## Professional Experience
 
 ### Andersen Lab — Senior Software Engineer
 January 2023 – February 2026 | Client: Allianz
 
-Developed Java/Spring Boot microservices for content integration and delivery in Allianz's travel-assistance web and mobile product for existing travel-insurance policyholders. The middleware consumed SQS notifications, retrieved content from S3, transformed and stored fragments in MongoDB, and assembled page responses delivered through a CDN.
+Developed Java/Spring Boot microservices for a travel-assistance product. The content backend processed change events through SQS, ingested data from S3 into MongoDB, and assembled page responses for CDN delivery across markets.
 
-- Built Java/Spring Boot tooling for bulk content migration, transformation and cleanup, processing AEM packages through a local JCR repository and Kubernetes Jobs.
-- Replaced repetitive manual text entry with spreadsheet-based bulk imports, using heuristic matching across market-specific content structures and team-reviewed CSV mappings.
-- Improved content delivery through dependency-aware CDN invalidation, cache warming and MongoDB query optimization; diagnosed and eliminated N+1 reference loading through projections and batched traversal.
-- Optimized frontend caching and prerendering and guided frontend developers through the changes.
-
-**Technologies:** Java, Spring Boot, Kubernetes Jobs, AWS S3, Amazon SQS, MongoDB, AEM, JCR, CDN caching.
+- Automated bulk content migrations, updates and cleanup with Java/Spring Boot tooling and Kubernetes Jobs, working around restricted access to the externally managed AEM platform.
+- Replaced repetitive manual text entry with spreadsheet-based bulk imports; built heuristic matching between differing market-specific content structures, with editable mappings reviewed before import.
+- Implemented dependency-aware CDN invalidation and cache warming, and resolved an N+1 database access problem through profiling and batched dependency loading.
+- Investigated and optimized frontend caching and prerendering, working with frontend developers to address delivery issues beyond the backend.
 
 ### EPAM Systems — Development Team Lead
 March 2021 – January 2023 | Client: Tory Burch
 
-Hands-on development lead working with one developer and two test automation engineers on a digital asset management platform. The processing workflow extracted PSD layers with ImageMagick, generated image renditions and distributed them to downstream integrations.
+Hands-on lead working with one developer and two test automation engineers on a digital asset platform. Its workflow extracted PSD layers with ImageMagick, generated image variants and distributed them to downstream systems.
 
-- Led development and test automation for the release of a new asset-processing workflow and migration of existing content, including the transfer of approximately 50,000 large assets between servers.
-- Introduced a shared feature map linking business rules, documentation and end-to-end tests; used it to identify requirements inconsistencies during migration and track functional test coverage.
-- Established structured Confluence documentation with a defined document lifecycle and maintenance process, making expected behavior and business rationale explicit alongside BDD scenarios.
-- Developed BDD tests for asset-processing behavior, expanding functional coverage and contributing to fewer production incidents.
-
-**Technologies:** Java, Groovy, AEM / JCR, Adobe Scene7, ImageMagick, Google Cloud, Docker, Jenkins, Akamai CDN, Grafana, Cucumber, Selenium.
+- Led development and test automation for the release of a new processing workflow and migration of existing content, including approximately 50,000 assets transferred between servers, including large PSD files of 500–1,500 MB.
+- Introduced a shared feature map to reconcile conflicting processing requirements and link business rules to end-to-end tests, documentation and migration checks.
+- Established a maintained reference for expected behavior and business rationale in Confluence, with a document lifecycle and update process adopted by the team.
+- Developed BDD tests and introduced functional coverage assessment against the feature map; coverage increased and the team experienced fewer production incidents.
 
 ### EPAM Systems — Senior Software Engineer
 April 2018 – February 2021 | Client: Tory Burch
 
-Headless e-commerce and content platform supporting international sites, shared content, multiple publishing instances and layered caching.
+Developed a headless e-commerce and content platform for international sites.
 
-- Implemented a proof of concept and MVP for deployment across countries and regions.
-- Developed digital asset processing with DAM Smart Crop and contributed to a custom single-page application solution.
-- Migrated the existing single-page application to the AEM SPA Editor.
-- Supported production releases, investigated failures through monitoring and logs, delivered hotfixes, and improved Jenkins pipelines and automated UI tests.
-
-**Technologies:** Java, AEM, Apache Jackrabbit, Groovy, Google Cloud, Docker, Jenkins, Maven, Cucumber, Selenium.
+- Implemented a proof of concept and MVP for multi-country deployment, developed asset-processing features and migrated the existing application to AEM SPA Editor.
+- Supported production releases, investigated failures, delivered hotfixes and improved Jenkins pipelines and automated UI tests.
 
 ### Soft-Werke LLC — Software Engineer / Senior Software Engineer
 June 2013 – December 2017
 
-Delivered enterprise portals, an online learning platform, a promotional-site platform and marketing-site features for clients including SAP, Efes Beverage Group and Nevskaya Kosmetika.
+Developed enterprise portals, online learning and promotional-site platforms for clients including SAP, Efes Beverage Group and Nevskaya Kosmetika.
 
 - Contributed to an online learning platform from inception, including requirements decomposition, architecture, payment integration and CI setup.
-- Developed platform modules and third-party CRM integrations for promotional sites with one-to-two-week delivery schedules.
-- Implemented AEM components and external integrations for SAP's marketing portal; investigated performance issues and wrote unit and integration tests.
-
-**Technologies:** Java, AEM, Liferay, MySQL, REST, SOAP, JavaScript, Jenkins, Maven, JUnit.
+- Built platform modules and third-party CRM integrations, and developed marketing-portal features with unit and integration tests.
 
 ## Education
 
