@@ -23,11 +23,11 @@ Senior Java Backend Engineer with 12+ years in software development, including J
 ## Professional Experience
 
 ### Andersen Lab — Senior Software Engineer
-January 2023 – February 2026 | Client: Allianz
+January 2023 – February 2026 | Client: Allianz Partners
 
 Developed Java/Spring Boot microservices for a travel-assistance product. The content backend processed change events through SQS, ingested data from S3 into MongoDB, and assembled page responses for CDN delivery across markets.
 
-- Automated bulk content migrations, updates and cleanup with Java/Spring Boot tooling and Kubernetes Jobs, working around restricted access to the externally managed AEM platform.
+- Automated bulk content migrations, updates and cleanup with Java/Spring Boot tooling and Kubernetes Jobs, working within strict tooling and API constraints on an externally managed platform.
 - Replaced repetitive manual text entry with spreadsheet-based bulk imports; built heuristic matching between differing market-specific content structures, with editable mappings reviewed before import.
 - Implemented dependency-aware CDN invalidation and cache warming, and resolved an N+1 database access problem through profiling and batched dependency loading.
 - Investigated and optimized frontend caching and prerendering, working with frontend developers to address delivery issues beyond the backend.
